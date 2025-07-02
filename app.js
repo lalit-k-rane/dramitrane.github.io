@@ -5,6 +5,35 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeApp();
 });
 
+document.getElementById('appointment-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    // Collect form data
+    var fullName = document.getElementById('fullName').value;
+    var phone = document.getElementById('phone').value;
+    var email = document.getElementById('email').value;
+    var date = document.getElementById('date').value;
+    var reason = document.getElementById('reason').value;
+    var additionalInfo = document.getElementById('additionalInfo').value;
+
+    // Send email via EmailJS
+    emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
+        fullName: fullName,
+        phone: phone,
+        email: email,
+        date: date,
+        reason: reason,
+        additionalInfo: additionalInfo
+    })
+    .then(function(response) {
+        alert("Appointment request sent successfully! We will contact you soon.");
+        document.getElementById('appointment-form').reset();
+    }, function(error) {
+        alert("There was an error sending your request. Please try again later.");
+    });
+});
+
+
 function initializeApp() {
     setupNavigation();
     setupMobileMenu();
