@@ -804,12 +804,14 @@ body {
 }
 
 .hero-image {
+width: 120px;
   flex: 1;
   display: flex;
   justify-content: center;
 }
 
 .doctor-photo, .doctor-photo-large {
+height: 350px;
   border-radius: var(--radius-lg);
   overflow: hidden;
 }
@@ -1282,18 +1284,4 @@ body {
   .section-title {
     font-size: var(--font-size-2xl);
   }
-
-  .photo-placeholder img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    display: block;
-    margin: 0 auto 10px auto;
-}
-.photo-placeholder span {
-    display: block;
-    text-align: center;
-    font-weight: bold;
-}
 }
