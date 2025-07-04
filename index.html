@@ -6,12 +6,6 @@
     <title>Dr. Amit Rane - Board-Certified Vascular Surgeon</title>
     <meta name="description" content="Dr. Amit Rane is a board-certified vascular surgeon with 15+ years of experience specializing in advanced vascular procedures and patient care.">
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-<script>
-(function(){
-    emailjs.init("YOUR_USER_ID"); // Replace with your EmailJS User ID
-})();
-</script>
 </head>
 <body>
     <!-- Navigation -->
@@ -64,12 +58,10 @@
                         <button class="btn btn--outline btn--lg" onclick="showSection('services')">View Services</button>
                     </div>
                 </div>
-                <div class="hero-image" width=120px height=120px>
-                    <div class="doctor-photo">
-                        <div class="photo-placeholder">
-                            <span><img src="dramitrane.jpeg" alt="Dr. Amit Rane"></span>
-                        </div>
-                    </div>
+                <div class="hero-image">
+                   <div class="doctor-photo">
+  <img style="  width: 100%;height: 100%;object-fit: contain;" src="dramitrane.jpeg" alt="Dr. Amit Rane">
+</div>
                 </div>
             </div>
         </div>
@@ -303,42 +295,42 @@
                 <div class="contact-forms">
                     <div class="form-section">
                         <h3>Schedule an Appointment</h3>
-                      <form class="appointment-form" id="appointment-form">
-    <div class="form-group">
-        <label class="form-label">Full Name *</label>
-        <input type="text" class="form-control" id="fullName" required>
-    </div>
-    <div class="form-group">
-        <label class="form-label">Phone Number *</label>
-        <input type="tel" class="form-control" id="phone" required>
-    </div>
-    <div class="form-group">
-        <label class="form-label">Email Address *</label>
-        <input type="email" class="form-control" id="email" required>
-    </div>
-    <div class="form-group">
-        <label class="form-label">Preferred Date</label>
-        <input type="date" class="form-control" id="date">
-    </div>
-    <div class="form-group">
-        <label class="form-label">Reason for Visit</label>
-        <select class="form-control" id="reason">
-            <option value="">Select a reason</option>
-            <option value="consultation">Initial Consultation</option>
-            <option value="follow-up">Follow-up Appointment</option>
-            <option value="second-opinion">Second Opinion</option>
-            <option value="emergency">Urgent Care</option>
-        </select>
-    </div>
-    <div class="form-group">
-        <label class="form-label">Additional Information</label>
-        <textarea class="form-control" rows="4" id="additionalInfo" placeholder="Please describe your symptoms or concerns..."></textarea>
-    </div>
-    <div class="hipaa-notice">
-        <small>* This form is HIPAA compliant and your information is secure. We will contact you within 24 hours to confirm your appointment.</small>
-    </div>
-    <button type="submit" class="btn btn--primary btn--full-width">Request Appointment</button>
-</form>
+                        <form class="appointment-form" id="appointment-form">
+                            <div class="form-group">
+                                <label class="form-label">Full Name *</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Phone Number *</label>
+                                <input type="tel" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Email Address *</label>
+                                <input type="email" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Preferred Date</label>
+                                <input type="date" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Reason for Visit</label>
+                                <select class="form-control">
+                                    <option value="">Select a reason</option>
+                                    <option value="consultation">Initial Consultation</option>
+                                    <option value="follow-up">Follow-up Appointment</option>
+                                    <option value="second-opinion">Second Opinion</option>
+                                    <option value="emergency">Urgent Care</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Additional Information</label>
+                                <textarea class="form-control" rows="4" placeholder="Please describe your symptoms or concerns..."></textarea>
+                            </div>
+                            <div class="hipaa-notice">
+                                <small>* This form is HIPAA compliant and your information is secure. We will contact you within 24 hours to confirm your appointment.</small>
+                            </div>
+                            <button type="submit" class="btn btn--primary btn--full-width">Request Appointment</button>
+                        </form>
                     </div>
                     
                     <div class="form-section">
