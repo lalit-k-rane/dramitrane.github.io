@@ -359,8 +359,8 @@ pre code {
 }
 
 .btn--secondary {
-  background: var(--color-secondary);
-  color: var(--color-text);
+  background: var(--color-primary);
+  color: var(--color-btn-primary-text);
 }
 
 .btn--secondary:hover {
