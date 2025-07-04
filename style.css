@@ -1134,6 +1134,7 @@ height: 350px;
 .map-content span {
   font-size: var(--font-size-xl);
   margin-bottom: var(--space-8);
+  font-weight: bold;
 }
 
 .form-section {
