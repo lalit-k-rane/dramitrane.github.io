@@ -1315,7 +1315,7 @@ body, html {
 }
 
 /* Main typographic elements */
-h1, h2, h3, h4, h5, h6, p, ul, li, nav, .navbar, .footer, .card, .section, .btn,
+h1, h2, h3, h4, h5, h6, p, ul, li, nav, .navbar, .footer, .card, .section,
 .form-control, .service-card, .blog-post, .about-section {
   color: var(--color-text) !important;
   background: inherit !important;
