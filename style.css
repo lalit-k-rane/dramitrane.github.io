@@ -1306,41 +1306,59 @@ height: 350px;
 
 }
 
-/* Ensure good contrast for text in all themes */
+/* UNIVERSAL TEXT/CONTRAST FIX FOR ALL THEMES */
+
+/* Inherit correct background/text on root elements */
 body, html {
-  color: var(--color-text);
-  background-color: var(--color-background);
+  background: var(--color-background) !important;
+  color: var(--color-text) !important;
 }
 
-h1, h2, h3, h4, h5, h6, p, li, ul, ol, nav, .navbar, .footer, .card, .section, .btn, .form-control, .service-card, .blog-post, .specialty-card, .about, .about-section {
-  color: var(--color-text);
-  background: inherit;
+/* Main typographic elements */
+h1, h2, h3, h4, h5, h6, p, ul, li, nav, .navbar, .footer, .card, .section, .btn,
+.form-control, .service-card, .blog-post, .about-section {
+  color: var(--color-text) !important;
+  background: inherit !important;
 }
 
-/* Always use the correct text color for links in all themes */
 a, a:visited {
-  color: var(--color-primary);
+  color: var(--color-primary) !important;
 }
 a:hover, a:focus {
-  color: var(--color-primary-hover);
+  color: var(--color-primary-hover) !important;
   text-decoration: underline;
 }
 
-/* Ensure form fields also use strong contrast */
-input, textarea, select {
-  color: var(--color-text);
-  background-color: var(--color-surface);
-}
-
-::-webkit-input-placeholder { color: var(--color-text-secondary); }
-::-moz-placeholder { color: var(--color-text-secondary); }
-:-ms-input-placeholder { color: var(--color-text-secondary); }
-::placeholder { color: var(--color-text-secondary); }
-
-/* For extra accessibility, slightly darken secondary text in dark mode for more contrast */
+/* Headings using brand colors, force to text color in dark mode */
 @media (prefers-color-scheme: dark) {
-  :root {
-    --color-text-secondary: rgba(200,200,200,0.8);
+  .service-card h3, .blog-post h3, .footer, .footer-section h3, .footer-section h4 {
+    color: var(--color-text) !important;
   }
 }
+
+/* Fix footer and any sections with special backgrounds in both themes */
+.footer, .footer-content {
+  background: var(--color-background) !important;
+  color: var(--color-text) !important;
+}
+/* If footer needs to stay blue in both themes, use strong white text instead: */
+@media (prefers-color-scheme: dark) {
+  .footer, .footer-content {
+    background: var(--medical-blue-dark) !important;
+    color: #fff !important;
+  }
+  .footer a, .footer-section h3, .footer-section h4 {
+    color: #fff !important;
+  }
+}
+
+/* Forms and placeholders */
+input, textarea, select {
+  color: var(--color-text) !important;
+  background: var(--color-surface) !important;
+}
+::placeholder {
+  color: var(--color-text-secondary) !important;
+}
+
 
