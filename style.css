@@ -1305,3 +1305,42 @@ height: 350px;
   }
 
 }
+
+/* Ensure good contrast for text in all themes */
+body, html {
+  color: var(--color-text);
+  background-color: var(--color-background);
+}
+
+h1, h2, h3, h4, h5, h6, p, li, ul, ol, nav, .navbar, .footer, .card, .section, .btn, .form-control, .service-card, .blog-post, .specialty-card, .about, .about-section {
+  color: var(--color-text);
+  background: inherit;
+}
+
+/* Always use the correct text color for links in all themes */
+a, a:visited {
+  color: var(--color-primary);
+}
+a:hover, a:focus {
+  color: var(--color-primary-hover);
+  text-decoration: underline;
+}
+
+/* Ensure form fields also use strong contrast */
+input, textarea, select {
+  color: var(--color-text);
+  background-color: var(--color-surface);
+}
+
+::-webkit-input-placeholder { color: var(--color-text-secondary); }
+::-moz-placeholder { color: var(--color-text-secondary); }
+:-ms-input-placeholder { color: var(--color-text-secondary); }
+::placeholder { color: var(--color-text-secondary); }
+
+/* For extra accessibility, slightly darken secondary text in dark mode for more contrast */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-text-secondary: rgba(200,200,200,0.8);
+  }
+}
+
