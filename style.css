@@ -1306,43 +1306,4 @@ height: 350px;
 
 }
 
-/* Recommended text colors for strong readability */
-:root {
-  --color-text: #1a2936;         /* Dark blue for light backgrounds */
-  --color-text-on-dark: #fff;    /* White for dark/overlay backgrounds */
-  --color-heading: #236871;      /* Strong teal-blue heading */
-}
 
-/* For DARK MODE support */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-text: #fff;
-    --color-heading: #fff;
-  }
-}
-
-/* Universal body text and heading rule */
-body {
-  color: var(--color-text);
-  background: var(--color-background);
-}
-h1, h2, h3, h4, h5, h6 {
-  color: var(--color-heading);
-}
-
-/* For ANY text over image/gradient/overlay backgrounds */
-.text-on-overlay,
-.hero-text,
-.text-light,
-.hero-section *, .main-header *, .banner-text * {
-  color: #fff !important;
-  text-shadow: 1px 2px 4px rgba(0,0,0,0.22); /* optional, but improves contrast */
-}
-
-/* For subtitles/paragraphs on overlay, if needed */
-.text-on-overlay-secondary,
-.hero-text-secondary,
-.banner-text-secondary {
-  color: #f4f4f4 !important;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.14);
-}
